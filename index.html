@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Giraffe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="welcome-screen">
+        <h1>Happy Giraffe</h1>
+        <p>To my love, every moment with you feels like a beautiful story. Let’s relive some of those moments together. I love you, [Wife's Name].</p>
+        <button onclick="startGame()">Enter</button>
+        <div class="giraffe"></div>
+    </div>
+
+    <div class="container hidden" id="stage-1">
+        <h2>Blow Babe</h2>
+        <p>Blow into the microphone to inflate the balloon!</p>
+        <div class="balloon" id="balloon"></div>
+        <p id="message"></p>
+        <button onclick="nextStage('stage-2')">Next</button>
+    </div>
+
+    <div class="container hidden" id="stage-2">
+        <h2>Draw a Fun Memory</h2>
+        <p>Draw a day that made you smile with me.</p>
+        <canvas id="drawingCanvas"></canvas>
+        <button onclick="nextStage('stage-3')">Next</button>
+    </div>
+
+    <div class="container hidden" id="stage-3">
+        <h2>Snakes and Ladders</h2>
+        <p>Roll the dice and play the game!</p>
+        <div id="gameBoard">Player is at position: 0</div>
+        <button onclick="rollDice()">Roll Dice</button>
+        <button onclick="nextStage('stage-4')">Next</button>
+    </div>
+
+    <div class="container hidden" id="stage-4">
+        <h2>Write a Poem</h2>
+        <p>Write a little love note or poem, just like we used to.</p>
+        <textarea id="poem" rows="5" cols="30" placeholder="Write your poem here..."></textarea>
+        <button onclick="finishGame()">Finish</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
